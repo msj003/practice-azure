@@ -30,6 +30,6 @@ jobs:
     uses: ./.github/workflows/platform_pr_dev_workflow.yml
     with:
       env_name: ${{ inputs.env_name || 'pr'}}
-      flow_type: ${{ inputs.flow_type || 'gpt4v-slides-preprocess' }}
+      flow_type: ${{ inputs.flow_type || 'gpt4v-slides/preprocess' }}
     secrets:
       azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
