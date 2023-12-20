@@ -1,0 +1,22 @@
+{
+    "envs":[
+                {
+                    "ENV_NAME": "pr",
+                    "RUNTIME_NAME": "llmops-runtime",
+                    "KEYVAULT_NAME": "ml-vault-manjinder",
+                    "RESOURCE_GROUP_NAME": "datascience",
+                    "WORKSPACE_NAME": "ml-manjinder",
+                    "STANDARD_FLOW_PATH": "flows/gpt4v-preprocess", 
+                    "EVALUATION_FLOW_PATH": "flows/gpt4v-preprocess_eval"
+                },
+                {
+                    "ENV_NAME": "dev",
+                    "RUNTIME_NAME": "",
+                    "KEYVAULT_NAME": "",
+                    "RESOURCE_GROUP_NAME": "",
+                    "WORKSPACE_NAME": "",
+                    "STANDARD_FLOW_PATH": "flows/gpt4v-preprocess", 
+                    "EVALUATION_FLOW_PATH": "flows/gpt4v-preprocess_eval"
+                }
+            ]
+        }
