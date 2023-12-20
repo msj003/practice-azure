@@ -15,7 +15,7 @@ on:
         default: "gpt4v-slides-preprocess"
   pull_request:
     branches:
-      - master
+      - main
       - development
     paths:
       - '.github/**'
