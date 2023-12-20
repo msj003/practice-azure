@@ -1,0 +1,12 @@
+{
+    "datasets":[
+        {
+            "PROMPT_FLOW_CONFIG_NAME": "gpt4v_slides",
+            "ENV_NAME": "pr",
+            "DATA_PURPOSE": "pr_data",
+            "DATA_PATH":"data/data.jsonl",
+            "DATASET_NAME":"gpt4v_slides_pr",
+            "DATASET_DESC":"this dataset is for pr validation only"
+        }
+    ]
+}
