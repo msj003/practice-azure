@@ -1,0 +1,35 @@
+name: gpt4v-slides-preprocess_pr_dev_pipeline
+
+on:
+  workflow_call:
+    inputs:
+      env_name:
+        type: string
+        description: "Execution Environment"
+        required: true
+        default: "dev"
+      flow_type:
+        type: string
+        description: "The flow usecase to execute"
+        required: true
+        default: "gpt4v-slides-preprocess"
+  pull_request:
+    branches:
+      - master
+      - development
+    paths:
+      - '.github/**'
+      - 'llmops/**'
+      - 'gpt4v_slides/preprocess/**'
+
+#=====================================
+# Execute platform_pr_dev_workflow workflow for experiment, evaluation and deployment of flows
+#=====================================
+jobs:
+  execute-platform-pr-workflow:
+    uses: ./.github/workflows/platform_pr_dev_workflow.yml
+    with:
+      env_name: ${{ inputs.env_name || 'pr'}}
+      flow_type: ${{ inputs.flow_type || 'web_classification' }}
+    secrets:
+      azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
